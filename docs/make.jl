@@ -20,6 +20,7 @@ makedocs(
 )
 
 deploydocs(
-    repo = "github.com/ziotom78/Healpix.jl.git",
+    repo = "github.com/JuliaAstro/Healpix.jl.git",
+    versions = ["stable" => "v^", "v#.#"], # Restrict to minor releases
     push_preview = true,
 )

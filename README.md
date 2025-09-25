@@ -1,9 +1,9 @@
 # Healpix
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://ziotom78.github.io/Healpix.jl/stable)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://ziotom78.github.io/Healpix.jl/dev)
-[![Build Status](https://github.com/ziotom78/Healpix.jl/workflows/Unit%20tests/badge.svg)](https://github.com/ziotom78/Healpix.jl/actions?query=workflow%3A%22Unit+tests%22)
-[![Codecov](https://codecov.io/gh/ziotom78/Healpix.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/ziotom78/Healpix.jl)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://juliaastro.org/Healpix/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://juliaastro.org/Healpix.jl/dev/)
+[![Build Status](https://github.com/JuliaAstro/Healpix.jl/workflows/Unit%20tests/badge.svg)](https://github.com/JuliaAstro/Healpix.jl/actions?query=workflow%3A%22Unit+tests%22)
+[![Codecov](https://codecov.io/gh/JuliaAstro/Healpix.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/JuliaAstro/Healpix.jl)
 <a href="https://ascl.net/2109.028"><img src="https://img.shields.io/badge/ascl-2109.028-blue.svg?colorB=262255" alt="ascl:2109.028" /></a>
 
 Healpix.jl is a set of Julia functions that implement the
@@ -50,11 +50,11 @@ Pkg.add("Healpix.jl")
 
 Here are some code snippets that show how to use `Healpix.jl`. It is
 interesting to have a look at
-[test/runtests.jl](https://github.com/ziotom78/Healpix.jl/blob/master/test/runtests.jl)
+[test/runtests.jl](https://github.com/JuliaAstro/Healpix.jl/blob/master/test/runtests.jl)
 as well.
 
 Refer to the
-[documentation](https://ziotom78.github.io/Healpix.jl/stable) for more
+[documentation](https://juliaastro.org/Healpix/) for more
 examples.
 
 
@@ -87,7 +87,7 @@ print("average: $(mean(m.pixels))\n")
 
 ## How to contribute
 
-See the document [CONTRIBUTING.md](https://github.com/ziotom78/Healpix.jl/blob/master/CONTRIBUTING.md).
+See the document [CONTRIBUTING.md](https://github.com/JuliaAstro/Healpix.jl/blob/master/CONTRIBUTING.md).
 
 ## Citing Healpix.jl
 
@@ -125,4 +125,4 @@ See the [ASCL guidelines](http://ascl.net/home/getwp/351) for more information.
 Healpix.jl is released under the GPL license. Versions before 2.3.0
 were released under a MIT license, but this was considered
 incompatible with the way the code has been written
-([#15](https://github.com/ziotom78/Healpix.jl/issues/15)).
+([#15](https://github.com/JuliaAstro/Healpix.jl/issues/15)).
