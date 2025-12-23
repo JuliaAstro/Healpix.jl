@@ -618,8 +618,8 @@ end
     getEquatorIdx(nside::Integer)
     getEquatorIdx(res::Resolution)
 
-    Computes the ring index of the equator in a map of `Resolution` `res` or
-    NSIDE parameter given by `nside`.
+Computes the ring index of the equator in a map of `Resolution` `res` or
+NSIDE parameter given by `nside`.
 
 """
 getEquatorIdx(nside::Integer) = 2*nside
@@ -628,11 +628,13 @@ getEquatorIdx(res::Resolution) = getEquatorIdx(res.nside)
 ######################################################
 
 """
-    Create an array of the colatitude in radians (theta) of each ring index in `rings` for a map with resolution `res`.
+    ring2theta(rings::Vector{I}, res::Resolution) where {I<:Integer}
 
-    If no `rings` array is passed, the computation is performed on all the rings deducted from `res`.
+Create an array of the colatitude in radians (theta) of each ring index in `rings` for a map with resolution `res`.
 
-    If an integer `ring` is passed, a single Float value of the colatitude is returned.
+If no `rings` array is passed, the computation is performed on all the rings deducted from `res`.
+
+If an integer `ring` is passed, a single Float value of the colatitude is returned.
 """
 function ring2theta(rings::Vector{I}, res::Resolution) where {I<:Integer}
     theta = Vector{Float64}(undef, length(rings))
