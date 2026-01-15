@@ -22,7 +22,7 @@ abstract type RingOrder <: Order end
     abstract type NestedOrder <: Order
 
 The `NestedOrder` type should be used when creating `HealpixMap` types in
-order to specify that the pixels in the map are sorted in ring
+order to specify that the pixels in the map are sorted in nested
 ordering. (See also `RingOrder`.)
 """
 abstract type NestedOrder <: Order end
