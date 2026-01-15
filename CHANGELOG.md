@@ -1,5 +1,7 @@
 # HEAD
 
+-   Fix docstring [#136](https://github.com/JuliaAstro/Healpix.jl/pull/136)
+
 # Version 4.2.4
 
 -   Add dependency on LazyArtifacts [18fde42](https://github.com/ziotom78/Healpix.jl/commit/18fde420dba069277dfb328076c99a995bc5c275)
