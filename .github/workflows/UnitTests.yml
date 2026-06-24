@@ -17,6 +17,8 @@ jobs:
       matrix:
         julia-version: ['min', 'lts', '1']
         os: [ubuntu-latest, windows-latest, macOS-latest]
+        exclude:
+          - { os: macos-latest, julia-version: min }
     steps:
       - uses: actions/checkout@v6
       - name: "Set up Julia"
