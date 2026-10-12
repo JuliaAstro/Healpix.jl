@@ -42,6 +42,19 @@ Alm(lmax, mmax) = Alm{ComplexF64}(lmax, mmax)
 Alm(lmax, mmax, arr::AA) where {T <: Number,AA <: AbstractVector{T}} =
     Alm{T,AA}(lmax, mmax, arr)
 
+
+Base.ndims(alm::Alm) = ndims(alm.alm)
+Base.size(alm::Alm) = size(alm.alm)
+Base.size(alm::Alm, d) = size(alm.alm, d)
+Base.length(alm::Alm) = length(alm.alm)
+Base.iterate(alm::Alm) = iterate(alm.alm)
+Base.iterate(alm::Alm, i) = iterate(alm.alm, i)
+Base.getindex(alm::Alm, i) = alm.alm[i]
+Base.firstindex(alm::Alm) = firstindex(alm.alm)
+Base.lastindex(alm::Alm) = lastindex(alm.alm)
+Base.eltype(::Type{<:Alm{T}}) where {T} = T
+
+
 ################################################################################
 
 """

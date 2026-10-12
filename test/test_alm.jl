@@ -212,3 +212,29 @@ test_alm = [0.5 + 0.5im, 0.5 + 0.5im, 0.5 + 0.5im,
 #dot
 test_res = 44.0
 @test isapprox(test_res, LinearAlgebra.:dot(alm1, alm2))
+
+## test array/iterator interface
+
+alm = Healpix.Alm(3, 2, ComplexF64.(1:9))
+
+@test ndims(alm) == 1
+@test size(alm) == (9,)
+@test size(alm, 1) == 9
+@test size(alm, 2) == 1
+@test length(alm) == 9
+@test eltype(alm) == ComplexF64
+@test eltype(Healpix.Alm{ComplexF32}(3, 2)) == ComplexF32
+
+@test alm[1] == 1.0 + 0.0im
+@test alm[9] == 9.0 + 0.0im
+@test alm[2:4] == ComplexF64[2, 3, 4]
+@test_throws BoundsError alm[10]
+
+@test firstindex(alm) == 1
+@test lastindex(alm) == 9
+@test alm[end] == 9.0 + 0.0im
+@test alm[end-1:end] == ComplexF64[8, 9]
+
+@test collect(alm) == ComplexF64.(1:9)
+@test sum(alm) == 45.0 + 0.0im
+@test [a for a in alm] == alm.alm
