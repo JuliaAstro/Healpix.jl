@@ -1,5 +1,7 @@
 # HEAD
 
+- - Clarify that Healpix.jl has been licensed under the GNU GPL, version 2 or (at the user’s option) any later version, since version 2.3.0 [#146](https://github.com/JuliaAstro/Healpix.jl/pull/146)
+
 - Add `AbstractArray` interface to `Alm` #144 thanks to @hsgg
 
 - Fix docstring [#136](https://github.com/JuliaAstro/Healpix.jl/pull/136)
