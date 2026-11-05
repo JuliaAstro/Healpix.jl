@@ -11,13 +11,13 @@ Healpix.jl is a set of Julia functions that implement the
 pixelate a 2-sphere. The HEALPix pixelisation has a number of features
 that make it efficient for the following tasks:
 
--   All pixels have the same area (*equal-area pixelisation*);
--   It is efficient to compute the Fourier decomposition in spherical
+- All pixels have the same area (*equal-area pixelisation*);
+- It is efficient to compute the Fourier decomposition in spherical
     harmonics of a discretized signal on the sphere (using the `RING`
     ordering scheme);
--   It is efficient to find neighbour pixels (using the `NESTED`
+- It is efficient to find neighbour pixels (using the `NESTED`
     ordering scheme);
--   The base pixelisation divides the 2-sphere in 12 pixels, but each
+- The base pixelisation divides the 2-sphere in 12 pixels, but each
     of these pixels can be divided into four sub-pixels, and the
     process can be continued; in principle, the size of a pixel can be
     reduced to arbitrarily small values.
@@ -25,7 +25,6 @@ that make it efficient for the following tasks:
 HEALPix is widely used in cosmology to store maps of the CMB
 temperature and polarization anisotropies, which is the field studied
 by the authors of this package.
-
 
 # Supported platforms
 
@@ -35,7 +34,6 @@ instead of providing bindings to the original implementation of the
 This means that, unlike the original implementation, Healpix.jl is
 **fully supported on Windows systems**, among with Linux and Mac OS X.
 
-
 ## Installation
 
 From the Julia REPL, run
@@ -44,7 +42,6 @@ From the Julia REPL, run
 import Pkg
 Pkg.add("Healpix.jl")
 ````
-
 
 ## Usage examples
 
@@ -56,7 +53,6 @@ as well.
 Refer to the
 [documentation](https://juliaastro.org/Healpix/) for more
 examples.
-
 
 ### Dealing with resolutions
 
@@ -71,7 +67,6 @@ res = Healpix.Resolution(256)
 print("The pixel index is $(Healpix.ang2pixNest(res, 0.1, 0.2))\n")
 `````
 
-
 ### Reading a map from a FITS file
 
 This snippet loads a map named `planck_70GHz.fits` into an array of
@@ -83,7 +78,6 @@ import Healpix
 m = Healpix.readMapFromFITS("planck_70GHz.fits", 1, Float64)
 print("average: $(mean(m.pixels))\n")
 `````
-
 
 ## How to contribute
 
@@ -122,7 +116,8 @@ See the [ASCL guidelines](http://ascl.net/home/getwp/351) for more information.
 
 ## License
 
-Healpix.jl is released under the GPL license. Versions before 2.3.0
+Healpix.jl is released under the GNU General Public License (GPL),
+version 2 or (at your option) any later version. Versions before 2.3.0
 were released under a MIT license, but this was considered
 incompatible with the way the code has been written
 ([#15](https://github.com/JuliaAstro/Healpix.jl/issues/15)).
